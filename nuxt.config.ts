@@ -4,5 +4,8 @@ export default defineNuxtConfig({
   //nitro: {
     //preset: 'service-worker'
   //},
-  modules: ['@nuxt/content']
+  modules: ['@nuxt/content'],
+  router: {
+    base: "/ebt-nuxt3/",
+  },
 })
