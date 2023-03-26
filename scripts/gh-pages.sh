@@ -2,8 +2,6 @@ SCRIPT=`basename $0`
 echo -e "$SCRIPT: BEGIN"
 
 git checkout main
-node scripts/version.cjs > version
-cp version .output/public/version
 
 BRANCH=`git rev-parse --abbrev-ref HEAD`
 if [ "$BRANCH" != "gh-pages" ]; then
