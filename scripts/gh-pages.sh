@@ -18,6 +18,7 @@ rm -rf about api bad_links dist index _nuxt testdir
 
 echo -e "$SCRIPT: copying new content"
 cp -r .output/public/* .
+node scripts/version.cjs > version
 ls -l
 git add
 git commit -m "gh-pages"
