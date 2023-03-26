@@ -23,7 +23,7 @@ rm -rf about api bad_links dist index _nuxt testdir
 echo -e "$SCRIPT: copying new content"
 cp -r .output/public/* .
 ls -l
-git add
+git add .
 git commit -m "gh-pages"
 
 echo -e "$SCRIPT END"
