@@ -1,6 +1,10 @@
 SCRIPT=`basename $0`
 echo -e "$SCRIPT: BEGIN"
 
+git checkout main
+node scripts/version.cjs > version
+cp version .output/public/version
+
 BRANCH=`git rev-parse --abbrev-ref HEAD`
 if [ "$BRANCH" != "gh-pages" ]; then
   git checkout gh-pages; git pull
@@ -18,7 +22,6 @@ rm -rf about api bad_links dist index _nuxt testdir
 
 echo -e "$SCRIPT: copying new content"
 cp -r .output/public/* .
-node scripts/version.cjs > version
 ls -l
 git add
 git commit -m "gh-pages"
