@@ -1,4 +1,18 @@
-# Nuxt Content
+# content/index.md
+
+## Should work
+
+* [home (/)](/)
+* [/about](/about)
+* [/testdir/test](/testdir/test)
+
+## Should not work
+
+* [/index](/index)
+* [/testdir](/testdir)
+* [/testdir/](/testdir/)
+* [/index.md](/index.md)
+* [/about.md](/about.md)
 
 This page corresponds to the `/` route of your website. You can delete it or create another file in the `content/` directory.
 

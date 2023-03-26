@@ -1,4 +1,4 @@
-# content/about.md
+# content/testdir/test.md
 
 ## Should work
 
