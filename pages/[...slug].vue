@@ -11,6 +11,6 @@
 </template>
 <script setup>
   function message() {
-    return window.location;
+    return global.window?.location;
   }
 </script>

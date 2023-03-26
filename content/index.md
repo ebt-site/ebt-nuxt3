@@ -5,14 +5,7 @@
 * [home (/)](/)
 * [/about](/about)
 * [/testdir/test](/testdir/test)
-
-## Should not work
-
-* [/index](/index)
-* [/testdir](/testdir)
-* [/testdir/](/testdir/)
-* [/index.md](/index.md)
-* [/about.md](/about.md)
+* [/bad_links](/bad_links)
 
 This page corresponds to the `/` route of your website. You can delete it or create another file in the `content/` directory.
 
