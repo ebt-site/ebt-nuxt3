@@ -1,1 +1,1 @@
-export default {data:{"content-query-wx37ysSmxH":null},prerenderedAt:1679863935679}
+export default {data:{"content-query-wx37ysSmxH":null},prerenderedAt:1680106073055}
