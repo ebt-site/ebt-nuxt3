@@ -1,6 +1,8 @@
 SCRIPT=`basename $0`
 echo -e "$SCRIPT: BEGIN"
 
+set -e # exit on error
+
 echo -e "$SCRIPT: generating static build..."
 git checkout main
 npm run clean
@@ -26,5 +28,7 @@ ls -l
 echo -e "$SCRIPT: updating github"
 git add .
 git commit -m "gh-pages"
+git push
+git checkout main
 
 echo -e "$SCRIPT END"
