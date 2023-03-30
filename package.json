@@ -6,7 +6,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postversion": "node scripts/version.cjs > .output/public/version.txt"
+    "postgenerate": "node scripts/version.cjs > .output/public/version.txt"
   },
   "devDependencies": {
     "@nuxt/content": "^2.5.2",
