@@ -4,10 +4,25 @@
   font-style: normal;
   font-display: auto;
   unicode-range: U+000-5FF;
-  src: local("SourceSansPro"), url("/fonts/SourceSansPro/SourceSansPro-Regular.woff2") format("woff2"), url("/fonts/SourceSansPro/SourceSansPro-Regular.woff") format("woff");
+  src: 
+    local("SourceSansPro"), 
+    url("~/assets/SourceSansPro-Regular.woff2") format("woff2"), 
+    url("~/assets/SourceSansPro-Regular.otf") format("otf");
+}
+
+@font-face {
+  font-family: "NotoSans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+  unicode-range: U+000-5FF;
+  src: 
+    local("NotoSans"), 
+    url("~/assets/NotoSans-Regular.woff2") format("woff2"); 
 }
 
 :root {
+  font-family: "SourceSansPro";
   --focus-color: rgb(206, 132, 0);
   --focus-border: 2pt dashed;
   --ebt-sc-sans-font: "Skolar Sans PE", "Noto Sans", sans-serif;

@@ -5,7 +5,9 @@ const { resolve } = createResolver(import.meta.url)
 export default defineNuxtConfig({
   // Github pages
   ssr: true,
-  modules: ['@nuxt/content'],
+  modules: [
+    '@nuxt/content'
+  ],
   app: {
     baseURL: '/ebt-nuxt3/',
   },
@@ -24,5 +26,8 @@ export default defineNuxtConfig({
     },
   },
 
+  buildModules: [
+    '@nuxtjs/google-fonts'
+  ],
 })
 

@@ -16,9 +16,10 @@ import '~/assets/main.css'
 import { createVuetify } from 'vuetify'
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
-
+import { createI18n, useI18n } from 'vue-i18n';
+import { createVueI18nAdapter } from 'vuetify/locale/adapters/vue-i18n';
 import colors from 'vuetify/lib/util/colors'
-let COLOR_SAFFRON = "#ff9933";
+const COLOR_SAFFRON = "#ff9933";
 const vuetifyOpts = {
   ssr: true,
   components,
@@ -71,35 +72,21 @@ const vuetifyOpts = {
     },
   },
 };
-
-export default defineNuxtPlugin(nuxtApp => {
-  const vuetify = createVuetify(vuetifyOpts);
-
-  nuxtApp.vueApp.use(vuetify)
-})
-
-// TODO
-
-/*
-
-
-import { createI18n, useI18n } from 'vue-i18n';
-import { createVueI18nAdapter } from 'vuetify/locale/adapters/vue-i18n';
-import cs from './i18n/cs.ts';
-import da from './i18n/da.ts';
-import de from './i18n/de.ts';
-import en from './i18n/en.ts';
-import fr from './i18n/fr.ts';
-import hi from './i18n/hi.ts';
-import is from './i18n/is.ts';
-import ja from './i18n/ja.ts';
-import nb from './i18n/nb.ts';
-import nl from './i18n/nl.ts';
-import pl from './i18n/pl.ts';
-import pt from './i18n/pt.ts';
-import ro from './i18n/ro.ts';
-import si from './i18n/si.ts';
-import vi from './i18n/vi.ts';
+import cs from '~/src/i18n/cs.ts';
+import da from '~/src/i18n/da.ts';
+import de from '~/src/i18n/de.ts';
+import en from '~/src/i18n/en.ts';
+import fr from '~/src/i18n/fr.ts';
+import hi from '~/src/i18n/hi.ts';
+import is from '~/src/i18n/is.ts';
+import ja from '~/src/i18n/ja.ts';
+import nb from '~/src/i18n/nb.ts';
+import nl from '~/src/i18n/nl.ts';
+import pl from '~/src/i18n/pl.ts';
+import pt from '~/src/i18n/pt.ts';
+import ro from '~/src/i18n/ro.ts';
+import si from '~/src/i18n/si.ts';
+import vi from '~/src/i18n/vi.ts';
 const messages = { 
   cs,
   da,
@@ -124,6 +111,18 @@ const i18n = new createI18n({
   messages,
 });
 vuetifyOpts.adapter = createVueI18nAdapter({ i18n, useI18n });
+
+export default defineNuxtPlugin(nuxtApp => {
+  const vuetify = createVuetify(vuetifyOpts);
+
+  nuxtApp.vueApp.use(vuetify)
+})
+
+// TODO
+
+/*
+
+
 
 // Vuetify
 import { createVuetify, } from "vuetify"
