@@ -3,13 +3,12 @@
 ## Should work
 
 * [home (/)](/)
-* [/about](/about)
-* [/testdir/test](/testdir/test)
-* [/bad_links](/bad_links)
+* [/about](/wiki/about)
+* [/testdir/test](/wiki/testdir/test)
 
 This page corresponds to the `/` route of your website. You can delete it or create another file in the `content/` directory.
 
-Try to navigate to [/about](/about). These 2 pages are rendered by the `pages/[...slug].vue` component.
+Try to navigate to [/wiki/about](/wiki/about). These 2 pages are rendered by the `pages/[...slug].vue` component.
 
 ---
 

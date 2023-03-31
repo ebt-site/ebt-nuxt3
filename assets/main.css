@@ -1,0 +1,84 @@
+@font-face {
+  font-family: "SourceSansPro";
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+  unicode-range: U+000-5FF;
+  src: local("SourceSansPro"), url("/fonts/SourceSansPro/SourceSansPro-Regular.woff2") format("woff2"), url("/fonts/SourceSansPro/SourceSansPro-Regular.woff") format("woff");
+}
+
+:root {
+  --focus-color: rgb(206, 132, 0);
+  --focus-border: 2pt dashed;
+  --ebt-sc-sans-font: "Skolar Sans PE", "Noto Sans", sans-serif;
+  --ebt-sc-serif-font: "Skolar PE", "Noto Serif", "Skolar Sans PE", "Noto Sans", serif;
+}
+div.v-theme--light {
+  --v-high-emphasis-opacity: 1;
+}
+div.v-theme--dark {
+  --v-high-emphasis-opacity: 1;
+}
+.v-btn:hover {
+  color: rgb(var(--v-theme-link));
+}
+.v-btn:focus-within {
+  border: var(--focus-border) var(--focus-color);
+  border-radius: 8pt;
+  color: rgb(var(--v-theme-link));
+}
+.v-btn--icon:focus-within {
+  border: var(--focus-border) var(--focus-color);
+  border-radius: 8pt;
+}
+.v-expansion-panel {
+  border: 2pt dashed rgb(0,0,0,0);
+}
+.v-expansion-panel-title:focus {
+  border: 2pt dashed var(--focus-color);
+  border-radius: 0.5em;
+}
+.v-input:focus-within {
+  outline: 2pt dashed var(--focus-color);
+  outline-offset: 2pt;
+}
+a {
+  color: rgb(var(--v-theme-on-surface));
+  text-decoration: none;
+  font-weight: 500;
+}
+a:hover {
+  color: rgb(var(--v-theme-link));
+  text-decoration: underline;
+}
+a:focus {
+  color: rgb(var(--v-theme-link));
+  outline: 2pt dashed rgba(var(--v-theme-link),0.5);
+}
+.scv-matched {
+  color: rgb(var(--v-theme-matched));
+  font-weight: 600;
+}
+.debug {
+  color: aqua;
+}
+.debug:hover {
+  color: red;
+}
+.ebt-example {
+  font-weight: 600;
+  color: rgb(var(--v-theme-example));
+}
+.ebt-example:hover {
+  text-decoration: underline;
+  cursor: zoom-in;
+}
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}

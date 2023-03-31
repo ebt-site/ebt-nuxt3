@@ -18,7 +18,7 @@ fi
 echo -e "$SCRIPT: git branch: $BRANCH"
 
 echo -e "$SCRIPT: removing existing content"
-rm *html favicon.ico _payload.js
+rm *html favicon.* _payload.js
 rm -rf about api bad_links dist index _nuxt testdir
 
 echo -e "$SCRIPT: copying new content"
