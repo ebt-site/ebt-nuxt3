@@ -11,8 +11,8 @@
         <h3>Supported fonts</h3>
         <div :innerHTML="fontText('Noto Sans')" />
         <div :innerHTML="fontText('Noto Serif')" />
-        <div :innerHTML="fontText('SourceSansPro')" />
-        <div :innerHTML="fontText('SourceSerifPro')" />
+        <div :innerHTML="fontText('Source Sans Pro')" />
+        <div :innerHTML="fontText('Source Serif Pro')" />
 
         <h3>Unsupported fonts</h3>
         <div :innerHTML="fontText('unsupported')" />

@@ -1,35 +1,24 @@
 
 @font-face {
-  font-family: "SourceSansPro";
+  font-family: "Source Sans Pro";
   font-weight: 400;
   font-style: normal;
   font-display: auto;
   unicode-range: U+000-5FF;
   src: 
-    local("SourceSansPro"), 
+    local("Source Sans Pro"), 
     url("~/assets/SourceSansPro-Regular.woff2") format("woff2"); 
 }
 
 @font-face {
-  font-family: "SourceSerifPro";
+  font-family: "Source Serif Pro";
   font-weight: 400;
   font-style: normal;
   font-display: auto;
   unicode-range: U+000-5FF;
   src: 
-    local("SourceSerifPro"), 
+    local("Source Serif Pro"), 
     url("~/assets/SourceSerifPro-Regular.woff2") format("woff2"); 
-}
-
-@font-face {
-  font-family: "Roboto";
-  font-weight: 400;
-  font-style: normal;
-  font-display: auto;
-  unicode-range: U+000-5FF;
-  src: 
-    local("Roboto"), 
-    url("~/assets/Roboto-Regular.woff2") format("woff2"); 
 }
 
 @font-face {
