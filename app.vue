@@ -6,11 +6,13 @@
         :collapse="collapsed"
         density="compact"
       >
+        <v-app-bar-title>
+          <div class="ebt-title">
+            <div>EBT-Nuxt3</div>
+          </div>
+        </v-app-bar-title>
       </v-app-bar>
       <v-sheet>
-        <v-btn icon>
-          <v-icon icon="mdi-arrow-expand-left" />
-        </v-btn>
         <NuxtPage />
       </v-sheet>
     </v-main>

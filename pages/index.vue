@@ -1,7 +1,7 @@
 <template>
-  <v-card color="red-lighten-4" height="20em" >
+  <v-card height="20em" >
     <v-card-title>
-      pages/index.vue title
+      FILE: pages/index.vue
     </v-card-title>
     <v-card-text>
       <div style="display: flex; flex-flow: column">
@@ -9,6 +9,7 @@
           Hello
         </v-btn>
         <NuxtLink to="/wiki/about">About</NuxtLink>
+        <NuxtLink to="/font-test">Font Test</NuxtLink>
       </div>
     </v-card-text>
   </v-card>

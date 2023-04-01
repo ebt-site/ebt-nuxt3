@@ -13,8 +13,85 @@ import '@mdi/font/css/materialdesignicons.css'
 import '~/assets/main.css'
 //import 'vuetify/styles'
 
+// Vuetify
 import { createVuetify } from 'vuetify'
-import * as components from 'vuetify/components'
+//import * as components from 'vuetify/components'
+import {  // Minor optimization decreases zip by ~80kB
+  VAlert,
+  VApp,
+  VAppBar,
+  VAutocomplete,
+  VBottomNavigation,
+  VBtn,
+  VCard,
+  VCardActions,
+  VCardText,
+  VCardTitle,
+  VCheckbox,
+  VChip,
+  VChipGroup,
+  VCol,
+  VContainer,
+  VDialog,
+  VDivider,
+  VExpansionPanel,
+  VExpansionPanels,
+  VExpansionPanelText,
+  VExpansionPanelTitle,
+  VForm,
+  VIcon,
+  VMain,
+  VProgressCircular,
+  VProgressLinear,
+  VRow,
+  VSelect,
+  VSheet,
+  VSlider,
+  VSnackbar,
+  VSpacer,
+  VTextField,
+  VToolbar,
+  VToolbarTitle,
+
+} from 'vuetify/components'
+const components = {
+  VAlert,
+  VApp,
+  VAppBar,
+  VAutocomplete,
+  VBottomNavigation,
+  VBtn,
+  VCard,
+  VCardActions,
+  VCardText,
+  VCardTitle,
+  VCheckbox,
+  VChip,
+  VChipGroup,
+  VCol,
+  VContainer,
+  VDialog,
+  VDivider,
+  VExpansionPanel,
+  VExpansionPanels,
+  VExpansionPanelText,
+  VExpansionPanelTitle,
+  VForm,
+  VIcon,
+  VMain,
+  VProgressCircular,
+  VProgressLinear,
+  VRow,
+  VSelect,
+  VSheet,
+  VSlider,
+  VSnackbar,
+  VSpacer,
+  VTextField,
+  VToolbar,
+  VToolbarTitle,
+
+}
 import * as directives from 'vuetify/directives'
 import { createI18n, useI18n } from 'vue-i18n';
 import { createVueI18nAdapter } from 'vuetify/locale/adapters/vue-i18n';

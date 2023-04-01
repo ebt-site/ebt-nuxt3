@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: "SourceSansPro";
   font-weight: 400;
@@ -6,27 +7,59 @@
   unicode-range: U+000-5FF;
   src: 
     local("SourceSansPro"), 
-    url("~/assets/SourceSansPro-Regular.woff2") format("woff2"), 
-    url("~/assets/SourceSansPro-Regular.otf") format("otf");
+    url("~/assets/SourceSansPro-Regular.woff2") format("woff2"); 
 }
 
 @font-face {
-  font-family: "NotoSans";
+  font-family: "SourceSerifPro";
   font-weight: 400;
   font-style: normal;
   font-display: auto;
   unicode-range: U+000-5FF;
   src: 
-    local("NotoSans"), 
+    local("SourceSerifPro"), 
+    url("~/assets/SourceSerifPro-Regular.woff2") format("woff2"); 
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+  unicode-range: U+000-5FF;
+  src: 
+    local("Roboto"), 
+    url("~/assets/Roboto-Regular.woff2") format("woff2"); 
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+  unicode-range: U+000-5FF;
+  src: 
+    local("Noto Sans"), 
     url("~/assets/NotoSans-Regular.woff2") format("woff2"); 
 }
 
+@font-face {
+  font-family: "Noto Serif";
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+  unicode-range: U+000-5FF;
+  src: 
+    local("Noto Serif"), 
+    url("~/assets/NotoSerif-Regular.woff2") format("woff2"); 
+}
+
 :root {
-  font-family: "SourceSansPro";
+  font-family: "Noto Sans";
   --focus-color: rgb(206, 132, 0);
   --focus-border: 2pt dashed;
   --ebt-sc-sans-font: "Skolar Sans PE", "Noto Sans", sans-serif;
-  --ebt-sc-serif-font: "Skolar PE", "Noto Serif", "Skolar Sans PE", "Noto Sans", serif;
+  --ebt-sc-serif-font: "Skolar PE", "Noto Serif SC", "Skolar Sans PE", "Noto Sans", serif;
 }
 div.v-theme--light {
   --v-high-emphasis-opacity: 1;
