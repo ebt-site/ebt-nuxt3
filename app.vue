@@ -85,9 +85,13 @@
         });
       },
     },
+    */
     async mounted() {
       let msg = 'App.mounted() ';
       let { $t, $vuetify, settings, $i18n, volatile } = this;
+      console.log(msg, {$t});
+      return; // TODO
+
       volatile.$t = $t;
 
       // wait for Settings to load
@@ -122,6 +126,7 @@
         }
       });
     },
+    /*
     computed: {
       alertTitle(ctx) {
         let { $t } = ctx;
