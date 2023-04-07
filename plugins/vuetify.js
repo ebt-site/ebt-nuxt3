@@ -103,47 +103,16 @@ import { createI18n, useI18n } from 'vue-i18n';
 import { createVueI18nAdapter } from 'vuetify/locale/adapters/vue-i18n';
 import {
   VuetifyOpts,
-  Messages,
+  messages,
 } from "ebt-vue3";
 import colors from 'vuetify/lib/util/colors'
-import cs from '~/src/i18n/cs.ts';
-import da from '~/src/i18n/da.ts';
-import de from '~/src/i18n/de.ts';
-import en from '~/src/i18n/en.ts';
-import fr from '~/src/i18n/fr.ts';
-import hi from '~/src/i18n/hi.ts';
-import is from '~/src/i18n/is.ts';
-import ja from '~/src/i18n/ja.ts';
-import nb from '~/src/i18n/nb.ts';
-import nl from '~/src/i18n/nl.ts';
-import pl from '~/src/i18n/pl.ts';
-import pt from '~/src/i18n/pt.ts';
-import ro from '~/src/i18n/ro.ts';
-import si from '~/src/i18n/si.ts';
-import vi from '~/src/i18n/vi.ts';
 
 var vuetifyOpts;
 var nuxtPlugin;
 
 (async()=>{
+  const msg = "plugins.vuetify";
   const COLOR_SAFFRON = "#ff9933";
-  const messages = { 
-    cs,
-    da,
-    de,
-    en,
-    fr,
-    hi,
-    is,
-    ja,
-    nb,
-    nl,
-    pl,
-    pt,
-    ro,
-    si,
-    vi,
-  };
 
   const i18n = new createI18n({
     legacy: false,

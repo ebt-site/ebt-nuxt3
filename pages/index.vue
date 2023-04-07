@@ -8,19 +8,17 @@
         <v-btn @click="onClick">
           Hello
         </v-btn>
-        <div class="debug">
-          <h3>Test i18n </h3>
-            <v-radio-group v-model="$i18n.locale">
+        <v-card class="test-i18n">
+          <v-card-title>Test i18n</v-card-title>
+          <v-card-text>
+            <v-radio-group v-model="$i18n.locale"
+              inline>
               <v-radio label="English" value="en" />
               <v-radio label="Deutsch" value="de" />
             </v-radio-group>
-            <v-select v-model="$i18n.locale"
-              :items="$i18n.availableLocales">
-            </v-select>
-          <ul>
-          </ul>
-          <li>ebt.allowSettings: {{$t('ebt.allowSettings')}}</li>
-        </div>
+            ebt.allowSettings: {{$t('ebt.allowSettings')}}
+          </v-card-text>
+        </v-card>
         <NuxtLink to="/wiki/about">About</NuxtLink>
         <NuxtLink to="/font-test">Font Test</NuxtLink>
       </div>
@@ -52,3 +50,10 @@
   }
 
 </script>
+<style scoped>
+.test-i18n {
+  border: 1pt solid aqua;
+  border-radius: 5px;
+  padding: 3px;
+}
+</style>
