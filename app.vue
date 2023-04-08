@@ -13,7 +13,6 @@
         </v-app-bar-title>
       </v-app-bar>
       <v-sheet>
-        servers: {{settings.servers}}
         <NuxtPage />
       </v-sheet>
     </v-main>
@@ -24,12 +23,14 @@
   //import EbtChips from './components/EbtChips.vue';
   //import Settings from './components/Settings.vue';
   //import EbtProcessing from './components/EbtProcessing.vue';
-  import { useSettingsStore } from 'ebt-vue3';
+  import { 
+    useSettingsStore,
+    useAudioStore,
+    useVolatileStore,
+  } from 'ebt-vue3';
 
-  //import { useVolatileStore } from './stores/volatile.mjs';
-  //import { useAudioStore } from './stores/audio.mjs';
-  //import { logger } from "log-instance";
-  //import { nextTick, ref } from "vue";
+  import { logger } from "log-instance";
+  import { nextTick, ref } from "vue";
 
   export default {
 
@@ -42,10 +43,10 @@
     },
     */
     data: ()=>({
-      //audio: useAudioStore(),
+      audio: useAudioStore(),
       settings: useSettingsStore(),
-      //volatile: useVolatileStore(),
-      //unsubSettings: undefined,
+      volatile: useVolatileStore(),
+      unsubSettings: undefined,
       collapsed: false,
     }),
     /*
@@ -55,6 +56,7 @@
       Settings,
       EbtProcessing,
     },
+    */
     methods: {
       onHome(evt) {
         let msg = 'App.onHome() ';
@@ -85,12 +87,9 @@
         });
       },
     },
-    */
     async mounted() {
       let msg = 'App.mounted() ';
       let { $t, $vuetify, settings, $i18n, volatile } = this;
-      console.log(msg, {$t});
-      return; // TODO
 
       volatile.$t = $t;
 
@@ -126,8 +125,8 @@
         }
       });
     },
-    /*
     computed: {
+    /*
       alertTitle(ctx) {
         let { $t } = ctx;
         let titleKey = ctx.volatile.alertMsg?.context || 'ebt.applicationError';
@@ -143,8 +142,8 @@
         let { layout } = ctx;
         return layout.w < 400;
       },
-    },
     */
+    },
   }
 </script>
 <style>
