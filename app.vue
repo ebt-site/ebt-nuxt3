@@ -13,23 +13,23 @@
         </v-app-bar-title>
       </v-app-bar>
       <v-sheet>
+        servers: {{settings.servers}}
         <NuxtPage />
       </v-sheet>
     </v-main>
   </v-app>
 </template>
 <script>
-  /*
-  import EbtCards from './components/EbtCards.vue';
-  import EbtChips from './components/EbtChips.vue';
-  import Settings from './components/Settings.vue';
-  import EbtProcessing from './components/EbtProcessing.vue';
-  import { useSettingsStore } from './stores/settings.mjs';
-  import { useVolatileStore } from './stores/volatile.mjs';
-  import { useAudioStore } from './stores/audio.mjs';
-  import { logger } from "log-instance";
-  import { nextTick, ref } from "vue";
-  */
+  //import EbtCards from './components/EbtCards.vue';
+  //import EbtChips from './components/EbtChips.vue';
+  //import Settings from './components/Settings.vue';
+  //import EbtProcessing from './components/EbtProcessing.vue';
+  import { useSettingsStore } from 'ebt-vue3';
+
+  //import { useVolatileStore } from './stores/volatile.mjs';
+  //import { useAudioStore } from './stores/audio.mjs';
+  //import { logger } from "log-instance";
+  //import { nextTick, ref } from "vue";
 
   export default {
 
@@ -43,7 +43,7 @@
     */
     data: ()=>({
       //audio: useAudioStore(),
-      //settings: useSettingsStore(),
+      settings: useSettingsStore(),
       //volatile: useVolatileStore(),
       //unsubSettings: undefined,
       collapsed: false,

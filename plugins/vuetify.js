@@ -2,11 +2,11 @@
 
 //import { createApp, ref } from 'vue'
 //import App from './App.vue'
-//import { createPinia } from 'pinia'
+import { createPinia } from 'pinia'
 import { logger } from 'log-instance';
 //logger.logLevel = 'warn';
 
-//const pinia = createPinia();
+const pinia = createPinia();
 
 // Styles
 import '@mdi/font/css/materialdesignicons.css'
@@ -135,6 +135,7 @@ var nuxtPlugin;
     const vuetify = createVuetify(vuetifyOpts);
     const { vueApp } = nuxtApp;
 
+    vueApp.use(pinia);
     vueApp.use(i18n);
     vueApp.use(vuetify);
   })
