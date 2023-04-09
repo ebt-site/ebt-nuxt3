@@ -5,6 +5,7 @@
     "clean": "nuxt clean",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "postinstall": "scripts/post-install.sh",
     "preview": "nuxt preview",
     "postgenerate": "node scripts/version.cjs > .output/public/version.txt"
   },

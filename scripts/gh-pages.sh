@@ -5,6 +5,7 @@ set -e # exit on error
 
 echo -e "$SCRIPT: generating static build..."
 git checkout main
+ln -s node_modules/ebt-vue3/src .ebt-vue3-src
 npm run clean
 npm run generate
 
