@@ -24,10 +24,15 @@
   //import Settings from './components/Settings.vue';
   //import EbtProcessing from './components/EbtProcessing.vue';
   import { 
-    useSettingsStore,
+    //useSettingsStore,
+    //useAudioStore,
+    //useVolatileStore,
+  } from 'ebt-vue3'; // doesn't work: nitro errors
+  import { 
     useAudioStore,
+    useSettingsStore,
     useVolatileStore,
-  } from 'ebt-vue3';
+  } from './.ebt-vue3-src/index.mjs'; // symbolic link to node_modules
 
   import { logger } from "log-instance";
   import { nextTick, ref } from "vue";

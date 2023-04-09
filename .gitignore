@@ -1,5 +1,6 @@
 node_modules
 *.log*
+.ebt-vue3-src
 .nuxt
 .nitro
 .cache
