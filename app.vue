@@ -6,12 +6,58 @@
         :collapse="collapsed"
         density="compact"
       >
-        <v-app-bar-title>
-          <div class="ebt-title">
-            <div>EBT-Nuxt3</div>
+        <template v-if="collapsed">
+          <v-btn icon @click="collapsed=false" class="pr-5">
+            <v-icon icon="mdi-arrow-expand-left" />
+          </v-btn>
+        </template> <!-- collapsed -->
+        <template v-if="!collapsed">
+          <v-app-bar-title @click="collapsed=true" > 
+            <div class="ebt-title">
+              <img src="/img/jan-kopriva-7BootnN3-0I-unsplash.jpg"
+                class="ebt-nav-img"
+              />
+              <div>EBT-Nuxt3</div>
+            </div>
+          </v-app-bar-title>
+          
+          <v-menu location="left" attach v-if="narrowView">
+            <template v-slot:activator="{ props }">
+              <div class="app-menu-activator">
+                <v-btn v-bind="props" icon>
+                  <v-icon icon="mdi-menu" />
+                </v-btn>
+              </div>
+            </template>
+            <v-sheet class="app-menu-items">
+              <v-btn icon href="#/search" >
+                <v-icon icon="mdi-magnify"/>
+              </v-btn>
+              <v-btn icon @click.stop="onClickSettings">
+                <v-icon icon="mdi-cog"/>
+              </v-btn>
+            </v-sheet>
+          </v-menu>
+          <div v-if="!narrowView" class="pr-3">
+            <v-btn icon href="#/search" >
+              <v-icon icon="mdi-magnify"/>
+            </v-btn>
+            <v-btn id='btn-settings' icon @click="onClickSettings">
+              <v-icon icon="mdi-cog"/>
+            </v-btn>
           </div>
-        </v-app-bar-title>
+        </template>
+        <template v-if="!collapsed" v-slot:extension>
+          <!--ebt-chips /-->
+        </template> <!-- !collapsed -->
       </v-app-bar>
+      <v-sheet>
+        <div>
+          <!--ebt-processing /-->
+          <Settings />
+          <!--router-view /-->
+        </div>
+      </v-sheet>
       <v-sheet>
         <NuxtPage />
       </v-sheet>
@@ -21,7 +67,7 @@
 <script>
   //import EbtCards from './components/EbtCards.vue';
   //import EbtChips from './components/EbtChips.vue';
-  //import Settings from './components/Settings.vue';
+  import Settings from './.ebt-vue3-src/components/Settings.vue';
   //import EbtProcessing from './components/EbtProcessing.vue';
   import { 
     //useSettingsStore,
@@ -39,14 +85,12 @@
 
   export default {
 
-    /*
     setup() {
       const tabs = ref([]);
       return {
         tabs,
       }
     },
-    */
     data: ()=>({
       audio: useAudioStore(),
       settings: useSettingsStore(),
@@ -54,14 +98,12 @@
       unsubSettings: undefined,
       collapsed: false,
     }),
-    /*
     components: {
-      EbtCards,
-      EbtChips,
+      //EbtCards,
+      //EbtChips,
       Settings,
-      EbtProcessing,
+      //EbtProcessing,
     },
-    */
     methods: {
       onHome(evt) {
         let msg = 'App.onHome() ';
@@ -140,14 +182,17 @@
       alertMsg(ctx) {
         return ctx.volatile.alertMsg?.msg;
       },
+    */
       layout(ctx) {
         return ctx.volatile.layout.value;
       },
       narrowView(ctx) {
+        if (globalThis.window == null) {
+          return false;
+        }
         let { layout } = ctx;
         return layout.w < 400;
       },
-    */
     },
   }
 </script>
