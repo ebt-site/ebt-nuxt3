@@ -1,10 +1,14 @@
 <template>
-  <v-card height="20em" >
+  <v-card class="test-ebt-cards">
     <v-card-title>
       FILE: pages/index.vue
+      (EbtCards)
     </v-card-title>
     <v-card-text>
-      <div style="display: flex; flex-flow: column">
+      <div class="test-wiki-view">
+        <div class="text-h6">
+          WikiView
+        </div>
         <v-btn @click="onClick">
           Hello
         </v-btn>
@@ -20,7 +24,7 @@
           </v-card-text>
         </v-card>
         <NuxtLink to="/wiki/about">About</NuxtLink>
-        <NuxtLink to="/font-test">Font Test</NuxtLink>
+        <NuxtLink to="/wiki/font-test">Font Test</NuxtLink>
       </div>
     </v-card-text>
   </v-card>
@@ -52,8 +56,18 @@
 </script>
 <style scoped>
 .test-i18n {
-  border: 1pt solid aqua;
+  border: 1pt dashed aqua;
   border-radius: 5px;
+  padding: 3px;
+}
+.test-ebt-cards {
+  border: 2pt solid orange;
+  margin: 3pt;
+}
+.test-wiki-view {
+  border: 2pt solid lime;
+  border-radius: 5px;
+  margin: 3pt;
   padding: 3px;
 }
 </style>

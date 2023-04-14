@@ -1,20 +1,22 @@
 <template>
-  <v-card >
+  <v-card class="font-class">
     <v-card-title>
-      FILE: pages/font-test.vue
+      FILE: pages/wiki/font-test.vue
       <NuxtLink to="/">
         <v-icon icon="mdi-home" />
       </NuxtLink>
     </v-card-title>
     <v-card-text>
       <div style="display: flex; flex-flow: column">
-        <h3>Supported fonts</h3>
-        <div :innerHTML="fontText('Noto Sans')" />
-        <div :innerHTML="fontText('Noto Serif')" />
+        <div class="text-h5">Preferred  fonts</div>
         <div :innerHTML="fontText('Source Sans Pro')" />
         <div :innerHTML="fontText('Source Serif Pro')" />
 
-        <h3>Unsupported fonts</h3>
+        <div class="text-h5">Supported fonts</div>
+        <div :innerHTML="fontText('Noto Sans')" />
+        <div :innerHTML="fontText('Noto Serif')" />
+
+        <div class="text-h5">Unsupported  fonts</div>
         <div :innerHTML="fontText('unsupported')" />
         <div :innerHTML="fontText('Skolar PE')" />
         <div :innerHTML="fontText('Skolar Sans')" />
@@ -36,3 +38,9 @@
     `
   }
 </script>
+<style scoped>
+.font-class {
+  max-width: 40em;
+}
+
+</style>

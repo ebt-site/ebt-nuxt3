@@ -44,11 +44,11 @@
 }
 
 :root {
-  font-family: "Noto Sans";
+  font-family: "Source Sans Pro";
   --focus-color: rgb(206, 132, 0);
   --focus-border: 2pt dashed;
-  --ebt-sc-sans-font: "Skolar Sans PE", "Noto Sans", sans-serif;
-  --ebt-sc-serif-font: "Skolar PE", "Noto Serif SC", "Skolar Sans PE", "Noto Sans", serif;
+  --ebt-sc-sans-font: "Skolar Sans PE", "Source Sans Pro", "Noto Sans", sans-serif;
+  --ebt-sc-serif-font: "Skolar PE", "Source Sans Serif", "Noto Serif", serif;
 }
 div.v-theme--light {
   --v-high-emphasis-opacity: 1;
