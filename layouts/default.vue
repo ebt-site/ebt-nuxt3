@@ -1,31 +1,32 @@
 <template>
   <v-card class="test-ebt-cards">
     <v-card-title>
-      FILE: pages/index.vue
+      FILE: layouts/default.vue
       (EbtCards)
     </v-card-title>
     <v-card-text>
-      <div class="test-wiki-view">
-        <div class="text-h6">
+      <v-card class="test-sutta-view">
+        <v-card-title>
+          SuttaView
+        </v-card-title>
+        <v-card-text>
+          A sutta
+        </v-card-text>
+      </v-card>
+      <v-card class="test-wiki-view">
+        <v-card-title>
           WikiView
-        </div>
-        <v-btn @click="onClick">
-          Hello
-        </v-btn>
-        <v-card class="test-i18n">
-          <v-card-title>Test i18n</v-card-title>
-          <v-card-text>
-            <v-radio-group v-model="$i18n.locale"
-              inline>
-              <v-radio label="English" value="en" />
-              <v-radio label="Deutsch" value="de" />
-            </v-radio-group>
-            ebt.allowSettings: {{$t('ebt.allowSettings')}}
-          </v-card-text>
-        </v-card>
-        <NuxtLink to="/wiki/about">About</NuxtLink>
-        <NuxtLink to="/wiki/font-test">Font Test</NuxtLink>
-      </div>
+        </v-card-title>
+        <v-card-text>
+          <ol class="ml-5">
+            <li><NuxtLink to="/">Home</NuxtLink></li>
+            <li><NuxtLink to="/wiki">Wiki</NuxtLink></li>
+            <li><NuxtLink to="/wiki/about">About</NuxtLink></li>
+            <li><NuxtLink to="/wiki/font-test">Font Test</NuxtLink></li>
+          </ol>
+          <slot />
+        </v-card-text>
+      </v-card>
     </v-card-text>
   </v-card>
 </template>
@@ -55,17 +56,18 @@
 
 </script>
 <style scoped>
-.test-i18n {
-  border: 1pt dashed aqua;
-  border-radius: 5px;
-  padding: 3px;
-}
 .test-ebt-cards {
   border: 2pt solid orange;
   margin: 3pt;
 }
+.test-sutta-view {
+  border: 2pt dashed orange;
+  border-radius: 5px;
+  margin: 3pt;
+  padding: 3px;
+}
 .test-wiki-view {
-  border: 2pt solid lime;
+  border: 2pt dashed orange;
   border-radius: 5px;
   margin: 3pt;
   padding: 3px;

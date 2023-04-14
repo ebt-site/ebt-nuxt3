@@ -58,9 +58,13 @@
           <!--router-view /-->
         </div>
       </v-sheet>
-      <v-sheet class="test-nuxt-page">
+      <v-sheet class="test-app">
         <div class="text-h6">FILE: app.vue (NuxtPage)</div>
-        <NuxtPage />
+        <NuxtLayout>
+          <div class="test-nuxt-page">
+            <NuxtPage />
+          </div>
+        </NuxtLayout>
       </v-sheet>
     </v-main>
   </v-app>
@@ -271,8 +275,12 @@
   max-width: 300px;
   text-overflow: '';
 }
-.test-nuxt-page {
+.test-app {
   border: 2px solid yellow;
+  padding: 2pt;
+}
+.test-nuxt-page {
+  border: 2px dashed yellow;
   padding: 2pt;
 }
 </style>
