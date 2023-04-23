@@ -5,14 +5,34 @@
       (EbtCards)
     </v-card-title>
     <v-card-text>
-      <v-card class="test-sutta-view">
-        <v-card-title>
-          SuttaView
-        </v-card-title>
-        <v-card-text>
-          A sutta
-        </v-card-text>
-      </v-card>
+      <ClientOnly>
+        <v-card class="test-sutta-view" id="mn44" >
+          <v-card-title>
+            #mn44
+          </v-card-title>
+          <v-card-text>
+            A sutta
+            <div class="text-h6">Route</div>
+            <div>path: {{$route.path}}</div>
+            <div>hash: {{$route.hash}}</div>
+            <div>slug: {{$route.params.slug}}</div>
+            <div>route: {{$route}}</div>
+          </v-card-text>
+        </v-card>
+        <v-card class="test-sutta-view" id="/sutta/thig1.2:3.1/de/sabbamitta">
+          <v-card-title>
+            #/sutta/thig1.2:3.1/de/sabbamitta
+          </v-card-title>
+          <v-card-text>
+            A sutta
+            <div class="text-h6">Route</div>
+            <div>path: {{$route.path}}</div>
+            <div>hash: {{$route.hash}}</div>
+            <div>slug: {{$route.params.slug}}</div>
+            <div>route: {{$route}}</div>
+          </v-card-text>
+        </v-card>
+      </ClientOnly>
       <v-card class="test-wiki-view">
         <v-card-title>
           WikiView
@@ -20,6 +40,10 @@
         <v-card-text>
           <ol class="ml-5">
             <li><NuxtLink to="/">Home</NuxtLink></li>
+            <li><a href="#mn44">#mn44 (&lt;a&gt;)</a></li>
+            <li><NuxtLink to="#mn44">#mn44</NuxtLink></li>
+            <li><NuxtLink to="#/sutta/thig1.2:3.1/de/sabbamitta">
+              #/sutta/thig1.2:3.1/de/sabbamitta</NuxtLink></li>
             <li><NuxtLink to="/wiki">Wiki</NuxtLink></li>
             <li><NuxtLink to="/wiki/about">About</NuxtLink></li>
             <li><NuxtLink to="/wiki/font-test">Font Test</NuxtLink></li>

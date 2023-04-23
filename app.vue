@@ -129,6 +129,7 @@
         evt.preventDefault();
       },
       onClickSettings(evt) {
+        const msg = 'App.onClickSettings() ';
         let { volatile, audio } = this;
         let btn = document.getElementById('btn-settings');
         btn && btn.blur();
