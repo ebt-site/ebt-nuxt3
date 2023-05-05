@@ -1,5 +1,6 @@
 {
   "private": true,
+  "description": "DEPRECATED: nuxt3 just doesn't do what we need",
   "scripts": {
     "build": "nuxt build",
     "clean": "nuxt clean",
