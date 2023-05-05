@@ -24,6 +24,7 @@ import {
   messages,
 } from "ebt-vue3";
 import colors from 'vuetify/lib/util/colors'
+import { default as EbtConfig } from '../ebt-config.mjs';
 
 var vuetifyOpts;
 var nuxtPlugin;
@@ -48,11 +49,12 @@ var nuxtPlugin;
     adapter,
   });
 
-  nuxtPlugin = (nuxtApp => {
+  nuxtPlugin = (async nuxtApp => {
     const msg = 'vuetify.defineNuxtPlugin() ';
     const vuetify = createVuetify(vuetifyOpts);
     const { vueApp } = nuxtApp;
 
+    vueApp.provide('config', EbtConfig);
     vueApp.use(pinia);
     vueApp.use(i18n);
     vueApp.use(vuetify);

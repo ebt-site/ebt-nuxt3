@@ -2,8 +2,7 @@
   <v-card class="font-class">
     <v-card-title>
       FILE: pages/wiki/font-test.vue
-      <NuxtLink to="/">
-        <v-icon icon="mdi-home" />
+      <NuxtLink to="/"> <v-icon icon="mdi-home" />
       </NuxtLink>
     </v-card-title>
     <v-card-text>

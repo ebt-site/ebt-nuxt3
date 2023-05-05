@@ -20,6 +20,12 @@
               <div>EBT-Nuxt3</div>
             </div>
           </v-app-bar-title>
+          <v-btn @click="layout='default'" class="pr-5" title="Default Layout">
+            1
+          </v-btn>
+          <v-btn @click="layout='debug'" class="pr-5" title="Debug Layout">
+            2
+          </v-btn>
           
           <v-menu location="left" attach v-if="narrowView">
             <template v-slot:activator="{ props }">
@@ -48,19 +54,25 @@
           </div>
         </template>
         <template v-if="!collapsed" v-slot:extension>
-          <!--ebt-chips /-->
+          <EbtChips />
         </template> <!-- !collapsed -->
       </v-app-bar>
       <v-sheet>
         <div>
           <!--ebt-processing /-->
           <Settings />
+          <EbtCards v-if="settings?.cards?.length">
+            <template v-slot:home>
+              Hello Home
+              <NuxtPage />
+            </template>
+          </EbtCards>
           <!--router-view /-->
         </div>
       </v-sheet>
       <v-sheet class="test-app">
         <div class="text-h6">FILE: app.vue (NuxtPage)</div>
-        <NuxtLayout>
+        <NuxtLayout :name="layout">
           <div class="test-nuxt-page">
             <NuxtPage />
           </div>
@@ -70,9 +82,9 @@
   </v-app>
 </template>
 <script>
-  //import EbtCards from './components/EbtCards.vue';
-  //import EbtChips from './components/EbtChips.vue';
   import Settings from './.ebt-vue3-src/components/Settings.vue';
+  import EbtCards from './.ebt-vue3-src/components/EbtCards.vue';
+  import EbtChips from './.ebt-vue3-src/components/EbtChips.vue';
   //import EbtProcessing from './components/EbtProcessing.vue';
   import { 
     //useSettingsStore,
@@ -102,10 +114,11 @@
       volatile: useVolatileStore(),
       unsubSettings: undefined,
       collapsed: false,
+      layout: 'debug',
     }),
     components: {
-      //EbtCards,
-      //EbtChips,
+      EbtCards,
+      EbtChips,
       Settings,
       //EbtProcessing,
     },
@@ -189,15 +202,15 @@
         return ctx.volatile.alertMsg?.msg;
       },
     */
-      layout(ctx) {
-        return ctx.volatile.layout.value;
+      displayBox(ctx) {
+        return ctx.volatile.displayBox.value;
       },
       narrowView(ctx) {
         if (globalThis.window == null) {
           return false;
         }
-        let { layout } = ctx;
-        return layout.w < 400;
+        let { displayBox } = ctx;
+        return displayBox.w < 400;
       },
     },
   }

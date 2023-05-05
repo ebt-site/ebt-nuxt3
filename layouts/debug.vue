@@ -1,7 +1,7 @@
 <template>
   <v-card class="test-ebt-cards">
     <v-card-title>
-      FILE: layouts/default.vue
+      FILE: layouts/debug.vue
       (EbtCards)
     </v-card-title>
     <v-card-text>

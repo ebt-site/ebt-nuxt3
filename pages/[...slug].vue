@@ -15,8 +15,10 @@
 </template>
 
 <script setup>
+  import { default as EbtConfig } from '../ebt-config.mjs';
+
   useHead({
-    link: [{ rel: 'icon', type: 'image/png', href: 'favicon.png' }]
+    link: [{ rel: 'icon', type: 'image/png', href: `${EbtConfig.baseUrl}favicon.png` }]
   })
 
   function xonClick(evt) {

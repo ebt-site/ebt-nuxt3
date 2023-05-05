@@ -1,15 +1,16 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 import { createResolver } from '@nuxt/kit'
+import { default as EbtConfig } from './ebt-config.mjs'
 const { resolve } = createResolver(import.meta.url)
 
 export default defineNuxtConfig({
   // Github pages
-  ssr: true,
+  ssr: false,
   modules: [
     '@nuxt/content'
   ],
   app: {
-    baseURL: '/ebt-nuxt3/',
+    baseURL: EbtConfig.baseUrl
   },
 
   // Vuetify configuration
